@@ -6,14 +6,14 @@ var SongQueueView = Backbone.View.extend({
   initialize: function() {
     //collection refers to songQueue
     this.render();
-    this.collection.on('add', this.render, this);
+    this.collection.on('add remove', this.render, this);
+    
 
   },
 
   render: function() {
     // to preserve event handlers on child nodes, we must call .detach() on them before overwriting with .html()
     // see http://api.jquery.com/detach/
-    console.log(this.collection);
     this.$el.children().detach();
 
     this.$el.html('<th>Queue</th>').append(

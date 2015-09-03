@@ -20,12 +20,14 @@ var AppModel = Backbone.Model.extend({
     }, this);
 
     params.library.on('enqueue', function(song){
-      // debugger;
       this.get('songQueue').add(song);
-      //this.set('songQueue', new SongQueue(this.get('queue')));
-      //write an add method where from here you add the song to the song queue.
-
+      this.get('songQueue').playFirst();
     }, this)
+    
+    params.library.on('dequeue', function(song) {
+      this.get('songQueue').dequeue();
+      this.get('songQueue').playFirst();
+    }, this);
   }
 
 });
