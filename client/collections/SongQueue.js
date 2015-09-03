@@ -10,8 +10,8 @@ var SongQueue = Songs.extend({
     }
   },
 
-  dequeue: function(){
-    this.shift();
+  dequeue: function(song){
+    this.remove(song);
   }
 
 });
