@@ -21,9 +21,13 @@ describe('SongQueue', function() {
 
   describe('when a song is added', function() {
     describe('when it is the only song in the song queue', function() {
-      xit('plays it', function() {
-        var songQueue = new SongQueue();
-        songQueue.add(songData1);
+      it('plays it', function() {
+        // var songQueue = new SongQueue();
+        // songQueue.add(songData1);
+        var library = new Songs(songData1);
+        var app = new AppModel({library: library});
+        var appView = new AppView({model: app});
+        library.at(0).enqueue();
         expect(playSpy).to.have.been.called;
       });
     });

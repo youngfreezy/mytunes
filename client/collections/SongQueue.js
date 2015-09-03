@@ -13,5 +13,4 @@ var SongQueue = Songs.extend({
   dequeue: function(song){
     this.remove(song);
   }
-
 });
