@@ -27,7 +27,7 @@ var AppModel = Backbone.Model.extend({
     params.library.on('dequeue', function(song) {
       this.get('songQueue').dequeue();
       this.get('songQueue').playFirst();
-    }, this);
+    }, this)
   }
 
 });
