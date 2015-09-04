@@ -1,5 +1,23 @@
+html {
+  font-family: 'Vollkorn', serif;
+}
+
+.title {
+  font-size: 3em;
+  text-align: center;
+  font-style: italic;
+}
+
+audio {
+  width: 100%;
+}
+
+table {
+  margin: 1.5em;
+}
+
 th {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 tr:hover {

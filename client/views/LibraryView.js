@@ -1,9 +1,10 @@
 // LibraryView.js - Defines a backbone view class for the music library.
 var LibraryView = Backbone.View.extend({
 
-  tagName: 'table class="hoverable centered"',
+  tagName: 'table class="hoverable centered z-depth-1 teal accent-2"',
 
   initialize: function() {
+    this.collection.on('change', this.render, this);
     this.render();
   },
 
@@ -20,3 +21,5 @@ var LibraryView = Backbone.View.extend({
   }
 
 });
+
+

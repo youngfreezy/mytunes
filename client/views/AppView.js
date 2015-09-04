@@ -15,7 +15,7 @@ var AppView = Backbone.View.extend({
 
   render: function() {
     return this.$el.html([
-      this.playerView.$el,
+      $('<div class="black darken-5"></div>').append(this.playerView.$el),
       this.libraryView.$el,
       this.songQueueView.$el
     ]);
